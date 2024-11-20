@@ -3,6 +3,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
+from typing import Literal
 import uuid
 import os
 from agents import load_data, multi_dataframe_agent, model_pricing
@@ -55,8 +56,10 @@ async def favicon():
     return FileResponse("favicon.ico")
 
 
-@app.get("/chat/{message}")
-async def send_message(message: str):
+@app.get("/chat/{region}/{message}")
+async def send_message(region: Literal["auh"], message: str):
+    if region not in ["auh"]:
+        raise HTTPException(status_code=400, detail="Invalid region")
     print("\n[User]: ", message)
     try:
         with get_openai_callback() as cb:
