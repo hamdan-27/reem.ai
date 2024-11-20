@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ ! -f requirements.txt ]; then echo "Error: requirements.txt not found"; exit 1; fi
+          if [ ! -f backend/requirements.txt ]; then echo "Error: requirements.txt not found"; exit 1; fi
 
   static-code-analysis:
     needs: build
