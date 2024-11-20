@@ -1,0 +1,18 @@
+# folders
+app/__pycache__/
+ignore/
+app/bin/
+
+# .env
+*.env
+
+# .py files
+apitest.py
+generation_app.py
+
+# data
+reidin_new.csv
+
+# others
+*.ipynb
+building

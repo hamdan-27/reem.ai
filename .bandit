@@ -1,0 +1,3 @@
+[bandit]
+exclude = ./test_main.py
+# skips = B106

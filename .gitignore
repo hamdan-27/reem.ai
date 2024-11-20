@@ -1,0 +1,29 @@
+# folders
+__pycache__/
+.pytest_cache/
+ignore/
+bin/
+
+# scripts
+*.sh
+
+# .env
+env/
+venv/
+*.env
+
+# web
+static/
+templates/
+
+# .py files
+apitest.py
+generation_app.py
+data_refresh.py
+
+# data
+*reidin*.csv
+Transactions_clean.csv
+
+# others
+*.ipynb
