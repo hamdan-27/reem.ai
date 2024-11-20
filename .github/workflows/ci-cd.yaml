@@ -40,7 +40,7 @@ jobs:
           pip install bandit
       - name: Run bandit
         run: |
-          bandit -r .
+          bandit -r ./backend/
 
   deploy:
     needs: [build, static-code-analysis]
@@ -57,7 +57,7 @@ jobs:
           username: viewitadmin
           password: ${{ secrets.AZURE_VM_PASSWORD }}
           port: 22
-          source: "."
+          source: "./backend"
           target: "/home/viewitadmin/reem-ai"
       
       - name: Execute commands on Azure VM
