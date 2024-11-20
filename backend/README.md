@@ -8,7 +8,7 @@ _Viewit's entry for the Open Data Spark Hackathon Abu Dhabi 2024_
     git clone https://github.com/hamdan-27/reem.ai.git
 
 ### 2. Run the following commands
-Navigate to the backend's working directory:
+Make sure you are in the backend's working directory:
 
     cd backend/
 
